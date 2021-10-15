@@ -1,0 +1,11 @@
+body {
+  width: 70vh;
+  height: 80vh;
+  border: solid 1px black;
+}
+ul{
+  list-style: none;
+}
+.hidden{
+  display : none;
+}

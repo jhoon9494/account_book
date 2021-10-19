@@ -9,16 +9,20 @@
 </head>
 <body>
   <div id = "container">
-    <div>
-      <span>가계부</span>
-    </div>
+    <h2>가계부</h2>
     <div id = "totalCash">
-      <p></p>
-      <span>수입</span>
-      <span>지출</span>
+      합계금액
+      <span></span>
+    </div>
+    <div id = "totalIncome">
+      수입합계
+      <span></span>
+    </div>
+    <div id = "totalExpend">
+      지출합계
+      <span></span>
     </div>
       <div id = "navigator">
-        <span>전체 내역</span>
         <button>전체</button>
         <button>수입</button>
         <button>지출</button>
@@ -27,23 +31,31 @@
       <ul id = "detail"></ul>
     <div id = "addCash">
       <form id = "inputCashForm" class = "hidden">
-        <input type = "radio" name = "cash" value = "income"/>수입
-        <input type = "radio" name = "cash" value = "expend"/>지출
-        카테고리 
-        <select name = "history">
-          <option value = "">카테고리를 선택하세요.</option>
-          <option value = "salary">월급</option>
-          <option value = "bonus">보너스</option>
-          <option value = "food">식비</option>
-          <option value = "ride">교통비</option>
-          <option value = "shop">쇼핑</option>
-          <option value = "leisure">여가활동</option>
-          <option value = "etc">기타</option>
-        </select>
-        금액 
-        <input class = "inputCash" type ="number"/>
-        사용내역 
-        <input class = "inputComment" type = "text" placeholder = "사용내역을 입력하세요."/>
+        <div>
+          <input class = "radioBtn" type = "radio" name = "cash" value = "income"/>수입
+          <input class = "radioBtn" type = "radio" name = "cash" value = "expend"/>지출
+        </div>
+        <div>
+          카테고리 
+          <select class = "category" name = "history">
+            <option value = "">카테고리를 선택하세요.</option>
+            <option value = "salary">월급</option>
+            <option value = "bonus">보너스</option>
+            <option value = "food">식비</option>
+            <option value = "ride">교통비</option>
+            <option value = "shop">쇼핑</option>
+            <option value = "leisure">여가활동</option>
+            <option value = "etc">기타</option>
+          </select>
+        </div>  
+        <div>
+          금액 
+          <input class = "inputCash" type ="number"/>
+        </div>
+        <div>
+          사용내역 
+          <input class = "inputComment" type = "text" placeholder = "사용내역을 입력하세요."/>
+        </div>  
         <input id = "saveBtn" type = "submit" value = "저장하기"/>
         <button id = "innerBtn">닫기</button>
       </form>
@@ -55,5 +67,6 @@
 
   <script src = "js/hiddenForm.js"></script>
   <script src = "js/inputCash.js"></script>
+  <script src = "js/accountCash.js"></script>
 </body>
 </html>
